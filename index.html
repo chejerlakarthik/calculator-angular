@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app="calculatorApp">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Angular Albums</title>
+    <!-- JS Libraries -->
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-route.min.js"></script>
+    <script type="text/javascript" src="js/angular-animate.js"></script>
+    <script type="text/javascript" src="js/ui-bootstrap-tpls-0.10.0.min.js"></script>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/calculator.css" />
+    <!--<link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/bootstrap-theme.css" />
+    <link rel="stylesheet" href="css/bootstrap-theme.css.map" />
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.css.map" />-->
+    <!-- Custom Javascript code -->
+    <script type="text/javascript" src="js/controllers/calculatorController.js"></script>
+    <script type="text/javascript" src="js/services/calculatorService.js"></script>
+</head>
+
+<body ng-controller="calculatorCtrl">
+    <h1>Calculator App</h1>
+    <div name="errorDiv" align="center"> <span><p style="color:red;font-weight: bold;"> {{ error }} </p></span> </div>
+    <div style="clear:left;padding:10px">
+        <label class="form-label-calc">Operation :</label>
+        <select ng-options="oper for oper in operations" ng-model="selOper" ng-change="changeSelection(selOper)" class="form-input-calc"></select>
+        <br/>
+        <label class="form-label-calc" ng-init=" operandOneLabel = 'Operand One :'">{{ operandOneLabel }}</label>
+        <input type="number" name="operandOne" ng-model="operandOne" class="form-input-calc" ng-disabled="selOper === '---'" />
+        <br/>
+        <label class="form-label-calc" ng-hide="oneOperandOper()">Operand Two :</label>
+        <input type="number" name="operandTwo" ng-model="operandTwo" class="form-input-calc" ng-hide="oneOperandOper()" ng-disabled="selOper === '---'" />
+        <br/>
+        <label class="form-label-calc" ng-init="resultLabel = 'Result :'">{{ resultLabel }}</label>
+        <input type="number" name="result" ng-model="result" class="form-input-calc" ng-readonly="true" /> </div>
+    <div class="form-buttons-div"> <span>
+            <input type="submit" name="Calculate" ng-click="performOperation()" />
+            <input type="reset" name="Clear" ng-click="clear()" ng-dblclick="doubleClicked()" />
+        </span> </div>
+    <br/>
+    <details id="details" ng-open="{{showDetails}}" ng-click="toggleDetails()">
+        <summary>Show/Hide me</summary>
+        <p> This calculator is developed by Chejerla Karthik</p>
+    </details>
+</body>
+
+</html>

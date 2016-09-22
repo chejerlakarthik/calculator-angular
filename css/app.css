@@ -123,3 +123,63 @@ textarea {
   background-color: gray;
   border-color: black;
 }
+
+.custom-input-nbr{
+    padding: 5px;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+	width: 15%;
+	margin-bottom: 10px;
+}
+
+.custom-div-span-input{
+    margin-right: 10px;
+    width: 70px;
+}
+
+.select-custom{
+    width: 15%;
+    margin-bottom: 10px
+}
+
+div  > .form-label-calc{
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 20%;
+    text-align: right;
+    margin : 10px;
+}
+
+div > .form-input-calc{
+    display: inline-block;
+    float: left;
+    margin : 10px;
+    width: 15%;
+}
+
+.form-buttons-div{
+    margin-top: 10%;
+    clear: left;
+}
+
+.form-buttons-div > span > input {
+    width : 100px;
+    height : 40px;
+    border-radius: 8px;
+    background-color: cornflowerblue;
+    color: white;
+}
+
+div > span{
+    margin-left: 22%;
+    padding: 10px;
+}
+
+input[type=number] {
+	padding: 5px;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+	width: 15%;
+	margin-bottom: 10px;
+}

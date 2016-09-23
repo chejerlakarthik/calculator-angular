@@ -1,0 +1,26 @@
+<div class="calc-container">
+    <div name="errorDiv" class="calc-error"> <span ng-class="{'label' : error !== '', 'label-danger' : error !== ''}"> {{ error }} </span> </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Calculator App</h3> </div>
+        <div class="panel-body">
+            <div style="clear:left;padding:10px">
+                <label class="form-label-calc">Operation :</label>
+                <select ng-options="oper for oper in operations" ng-model="selOper" ng-change="changeSelection(selOper)" class="form-input-calc"></select>
+                <br/>
+                <label class="form-label-calc" ng-init=" operandOneLabel = 'Operand One :'">{{ operandOneLabel }}</label>
+                <input type="number" name="operandOne" ng-model="operandOne" class="form-input-calc form-control" ng-disabled="selOper === '---'" />
+                <br/>
+                <label class="form-label-calc" ng-hide="oneOperandOper()">Operand Two :</label>
+                <input type="number" name="operandTwo" ng-model="operandTwo" class="form-input-calc form-control" ng-hide="oneOperandOper()" ng-disabled="selOper === '---'" />
+                <br/>
+                <label class="form-label-calc" ng-init="resultLabel = 'Result :'">{{ resultLabel }}</label>
+                <input type="number" name="result" ng-model="result" class="form-input-calc" ng-readonly="true" /> </div>
+            <div class="form-buttons-div"> <span>
+            <input type="submit" name="Calculate" ng-click="performOperation()" class="custom-div-span-input"/>
+            <input type="reset" name="Clear" ng-click="clear()" ng-dblclick="doubleClicked()" class="custom-div-span-input"/>
+        </span> </div>
+        </div>
+    </div>
+    <div name="message" ng-if="message!==''">{{message}}</div>
+</div>

@@ -1,190 +1,194 @@
 .html-body {
-	background-color: lemonchiffon;
+    background-color: lemonchiffon;
 }
 
 .navbar-custom {
-	min-height: 60px;
-	background-color: burlywood;
+    min-height: 60px;
+    background-color: burlywood;
 }
 
 .alert-custom {
-	background-color: lightsteelblue;
-	color: teal
+    background-color: lightsteelblue;
+    color: teal
 }
 
 .label-custom {
-	font-size: large;
-	font-family: sans-serif;
-	margin: auto;
-	width: 60%;
+    font-size: large;
+    font-family: sans-serif;
+    margin: auto;
+    width: 60%;
 }
 
 .navbar-menu-link {
-	color: #FFF;
+    color: #FFF;
 }
 
 div.album {
-	float: left;
-	margin-left: 20px;
-	margin-right: 20px;
-	width: 300px;
-	min-height: 200px
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 300px;
+    min-height: 200px
 }
 
 div.input {
-	margin-left: 60px;
-	margin-right: 60px;
-	size: 20pc;
+    margin-left: 60px;
+    margin-right: 60px;
+    size: 20pc;
 }
 
-input[type=text] {
-	padding: 5px;
-	border-radius: 4px;
-	border: 1px solid #ccc;
-	width: 10%;
-	margin-bottom: 10px;
-}
-
-select{
-	padding: 5px;
-	border-radius: 4px;
-	border: 1px solid #ccc;
-	width: 10%;
-	margin-bottom: 10px;
+select {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 10%;
+    margin-bottom: 10px;
 }
 
 .odd {
-	color: orange;
+    color: orange;
 }
 
 .even {
-	color: yellow;
+    color: yellow;
 }
 
 textarea {
-	padding: 5px;
-	border-radius: 4px;
-	border: 1px solid #ccc;
-	width: 100%;
-	height: 100%;
-	margin-bottom: 10px
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px
 }
 
 .photo {
-	float: left;
-	margin: 1em;
-	width: auto;
-	height: auto;
+    float: left;
+    margin: 1em;
+    width: auto;
+    height: auto;
 }
 
 .photo-centre {
-	width: 50%;
-	height: auto;
-	margin: auto;
-	padding: 10px
+    width: 50%;
+    height: auto;
+    margin: auto;
+    padding: 10px
 }
 
 .photo>a>img,
 .photo>img {
-	display: block;
-	width: 300px;
-	height: 240px;
+    display: block;
+    width: 300px;
+    height: 240px;
 }
 
 .photo .caption-custom {
-	font-size: 18px;
-	font-weight: bold;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .photo-centre>a>img,
 .photo-centre>img {
-	display: block;
-	width: 600px;
-	height: 420px;
-	margin-top: 1em;
-	margin-bottom: 1em;
-	margin-left: 1em;
-	margin-right: 1em;
+    display: block;
+    width: 600px;
+    height: 420px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
 }
 
-.container>h2{
-	text-align: center;
+.container>h2 {
+    text-align: center;
 }
 
 .error-404>img {
-	display: block;
-	width: 100%;
-	height: auto;
-	border: 1px solid blue;
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid blue;
 }
 
 .btn-reset {
-  color: white;
-  background-color: gray;
-  border-color: black;
+    color: white;
+    background-color: gray;
+    border-color: black;
 }
 
-.custom-input-nbr{
+.custom-input-nbr {
     padding: 5px;
-	border-radius: 4px;
-	border: 1px solid #ccc;
-	width: 15%;
-	margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 15%;
+    margin-bottom: 10px;
 }
 
-.custom-div-span-input{
+.custom-div-span-input {
     margin-right: 10px;
     width: 70px;
 }
 
-.select-custom{
+.select-custom {
     width: 15%;
     margin-bottom: 10px
 }
 
-div  > .form-label-calc{
+div > .form-label-calc {
     display: inline-block;
     float: left;
     clear: left;
-    width: 20%;
+    width: 30%;
     text-align: right;
-    margin : 10px;
+    margin: 10px;
 }
 
-div > .form-input-calc{
+div > .form-input-calc {
     display: inline-block;
     float: left;
-    margin : 10px;
-    width: 15%;
+    margin: 10px;
+    width: 40%;
 }
 
-.form-buttons-div{
-    margin-top: 10%;
+.form-buttons-div {
     clear: left;
+    margin-top: 25%;
+    margin-left: 15%;
 }
 
 .form-buttons-div > span > input {
-    width : 100px;
-    height : 40px;
+    width: 105px;
+    height: 25px;
     border-radius: 8px;
     background-color: cornflowerblue;
     color: white;
 }
 
-div > span{
+.calc-error > span {
     margin-left: 22%;
     padding: 10px;
 }
 
 input[type=number] {
-	padding: 5px;
-	border-radius: 4px;
-	border: 1px solid #ccc;
-	width: 15%;
-	margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 40%;
+    margin-bottom: 10px;
 }
 
-.isa_error {
-    color: #D8000C;
-    background-color: #FFBABA;
+.calc-container {
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 10%;
+}
+
+.calc-error {
+    margin: 5%;
+}
+
+.login-panel {
+    width: 500px;
+    margin-left: 30%;
+    margin-top: 10%;
 }

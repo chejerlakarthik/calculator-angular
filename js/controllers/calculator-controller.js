@@ -1,8 +1,6 @@
-var calculatorApp = angular.module('calculatorApp', []);
-calculatorApp.controller('calculatorCtrl', function ($scope, calculatorService) {
+angular.module('calculatorApp').controller('calculatorCtrl', function ($scope, calculatorService) {
     $scope.operations = calculatorService.getAllOperations();
     $scope.singleOperandOperations = calculatorService.getSingleOperandOperations();
-    console.log($scope.operations.length);
     $scope.error = '';
     $scope.selOper = $scope.operations[0];
     $scope.showDetails = false;
@@ -10,7 +8,7 @@ calculatorApp.controller('calculatorCtrl', function ($scope, calculatorService) 
     $scope.changeSelection = function (operation) {
         $scope.selOper = operation;
         if ($scope.oneOperandOper()) {
-            $scope.operandOneLabel = 'Input Value';
+            $scope.operandOneLabel = 'Input Value :';
         }
         else {
             $scope.operandOneLabel = 'Operand One :';
@@ -39,6 +37,9 @@ calculatorApp.controller('calculatorCtrl', function ($scope, calculatorService) 
             if (response.status === 0) {
                 $scope.result = response.result;
                 $scope.resultLabel = response.resultLabel;
+                if (first === second !== '' && $scope.selOper === $scope.operations[3]) {
+                    $scope.message = 'You should try using SQUARE operation';
+                }
             }
             else {
                 $scope.error = response.message;
@@ -54,6 +55,7 @@ calculatorApp.controller('calculatorCtrl', function ($scope, calculatorService) 
             $scope.result = '';
             $scope.operandOneLabel = 'Operand One :';
             $scope.resultLabel = 'Result :';
+            $scope.message = '';
         }
         // Hide second operand field
     $scope.oneOperandOper = function () {

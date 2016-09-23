@@ -1,0 +1,19 @@
+<div class="login-panel">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Authenticate</h3> </div>
+        <div class="panel-body">
+            <form ng-submit="login()">
+                <div class="form-group">
+                    <label for="username">Username</label><span class="glyphicon glyphicon-user"></span>
+                    <input type="text" name="username" class="form-control" id="username" ng-model="user.name" /> </div>
+                <div class="form-group">
+                    <label for="pwd">Password</label><span class="glyphicon glyphicon-lock"></span>
+                    <input type="password" name="password" class="form-control" id="pwd" ng-model="user.pwd" /> </div>
+                <div class="form-group">
+                    <input type="submit" name="Login" value="Login" />
+                    <input type="reset" name="clear" value="Clear" /> </div>
+            </form>
+        </div>
+    </div>
+</div>

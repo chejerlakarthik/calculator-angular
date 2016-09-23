@@ -183,3 +183,8 @@ input[type=number] {
 	width: 15%;
 	margin-bottom: 10px;
 }
+
+.isa_error {
+    color: #D8000C;
+    background-color: #FFBABA;
+}

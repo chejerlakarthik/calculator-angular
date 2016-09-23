@@ -18,22 +18,31 @@ calculatorApp.controller('calculatorCtrl', function ($scope, calculatorService) 
     };
     // Function that executes on clicking Submit button
     $scope.performOperation = function () {
-        if ($scope.operandOne == '' && $scope.oneOperandOper()) {
-            $scope.error = 'Invalid input';
+        $scope.error = '';
+        if ($scope.selOper === $scope.operations[0]) {
+            $scope.error = 'Please select an operation first!';
         }
-        else if ($scope.operandOne == '' || $scope.operandTwo == '') {
+        else if ($scope.operandOne === '' || $scope.operandTwo === '') {
+            $scope.error = 'Invalid Inputs';
+            if (!($scope.oneOperandOper() && $scope.operandOne === '')) {
+                $scope.error = '';
+            }
+        }
+        else if (($scope.operandOne == '' || $scope.operandTwo == '') && !$scope.oneOperandOper()) {
             $scope.error = 'Invalid inputs';
         }
-        var first = parseFloat($scope.operandOne);
-        var second = parseFloat($scope.operandTwo);
-        var operands = [first, second];
-        var response = calculatorService.executeOperation($scope.selOper)(operands);
-        if (response.status === 0) {
-            $scope.result = response.result;
-            $scope.resultLabel = response.resultLabel;
-        }
-        else {
-            $scope.error = response.message;
+        if ($scope.selOper !== $scope.operations[0]) {
+            var first = parseFloat($scope.operandOne);
+            var second = parseFloat($scope.operandTwo);
+            var operands = [first, second];
+            var response = calculatorService.executeOperation($scope.selOper)(operands);
+            if (response.status === 0) {
+                $scope.result = response.result;
+                $scope.resultLabel = response.resultLabel;
+            }
+            else {
+                $scope.error = response.message;
+            }
         }
     };
     // Form reset

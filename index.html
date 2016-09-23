@@ -16,8 +16,6 @@
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/bootstrap-theme.css" />
     <link rel="stylesheet" href="css/bootstrap-theme.css.map" />
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/bootstrap.css.map" />
     <!-- Custom Javascript code -->
     <script type="text/javascript" src="js/controllers/calculatorController.js"></script>
@@ -26,16 +24,16 @@
 
 <body ng-controller="calculatorCtrl">
     <h1>Calculator App</h1>
-    <div name="errorDiv" align="center"> <span><p style="color:red;font-weight: bold;"> {{ error }} </p></span> </div>
+    <div name="errorDiv" align="center"> <span ng-class="{'label' : error !== '', 'label-danger' : error !== '' }"> {{ error }} </span></div>
     <div style="clear:left;padding:10px">
         <label class="form-label-calc">Operation :</label>
         <select ng-options="oper for oper in operations" ng-model="selOper" ng-change="changeSelection(selOper)" class="form-input-calc"></select>
         <br/>
         <label class="form-label-calc" ng-init=" operandOneLabel = 'Operand One :'">{{ operandOneLabel }}</label>
-        <input type="number" name="operandOne" ng-model="operandOne" class="form-input-calc" ng-disabled="selOper === '---'" />
+        <input type="number" name="operandOne" ng-model="operandOne" class="form-input-calc form-control" ng-disabled="selOper === '---'" />
         <br/>
         <label class="form-label-calc" ng-hide="oneOperandOper()">Operand Two :</label>
-        <input type="number" name="operandTwo" ng-model="operandTwo" class="form-input-calc" ng-hide="oneOperandOper()" ng-disabled="selOper === '---'" />
+        <input type="number" name="operandTwo" ng-model="operandTwo" class="form-input-calc form-control" ng-hide="oneOperandOper()" ng-disabled="selOper === '---'" />
         <br/>
         <label class="form-label-calc" ng-init="resultLabel = 'Result :'">{{ resultLabel }}</label>
         <input type="number" name="result" ng-model="result" class="form-input-calc" ng-readonly="true" /> </div>

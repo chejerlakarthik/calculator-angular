@@ -192,3 +192,7 @@ input[type=number] {
     margin-left: 30%;
     margin-top: 10%;
 }
+
+.spacing-glyphicon {
+    padding-left: 10px;
+}
